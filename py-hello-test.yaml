@@ -20,4 +20,9 @@ metadataTest:
   entrypoint: ["python3"]
   cmd: ["./server.py"]
   workdir: "/usr/src/app"
-  user: "user"
+  #user: "user"
+
+fileContentTests:
+- name: 'Python requirments'
+  path: '/usr/src/app/requirements.txt'
+  expectedContents: ['.*Flask==1.0.2.*']
