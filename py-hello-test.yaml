@@ -2,5 +2,22 @@ schemaVersion: '2.0.0'
 commandTests:
 - name: 'python version'
   command: 'python3'
-  args: ['version']
+  args: ['--version']
   expectedOutput: ['.*3.9.*']
+
+metadataTest:
+  # envVars:
+  #   - key: foo
+  #     value: baz
+  # labels:
+  #   - key: 'com.example.vendor'
+  #     value: 'ACME Incorporated'
+  #   - key: 'build-date'
+  #     value: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}$'
+  #     isRegex: true
+  exposedPorts: ["8080"]
+  volumes: ["/test"]
+  entrypoint: ["python3"]
+  cmd: ["./server.py"]
+  workdir: "/usr/src/app"
+  user: "root"
