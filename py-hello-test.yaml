@@ -15,9 +15,9 @@ metadataTest:
   #   - key: 'build-date'
   #     value: '^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}$'
   #     isRegex: true
-  exposedPorts: ["8080"]
-  volumes: ["/test"]
+  exposedPorts: ["8000"]
+  #volumes: ["/test"]
   entrypoint: ["python3"]
   cmd: ["./server.py"]
   workdir: "/usr/src/app"
-  user: "root"
+  user: "user"
