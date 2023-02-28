@@ -26,3 +26,12 @@ fileContentTests:
 - name: 'Python requirments'
   path: '/usr/src/app/requirements.txt'
   expectedContents: ['.*Flask==1.0.2.*']
+
+fileExistenceTests:
+- name: 'server'
+  path: '/usr/src/app/server.py'
+  shouldExist: true
+  permissions: '-rw-r--r--'
+  uid: 1000
+  gid: 1000
+  isExecutableBy: 'group'
